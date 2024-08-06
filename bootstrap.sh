@@ -26,7 +26,7 @@ else
 		if [[ $REPLY =~ ^[Yy]$ ]]; then
 			doIt;
 		fi;
-	elif [ $CODESPACES ]
+	elif [ $CODESPACES ]; then
  		doIt;
 	fi;
 fi;
