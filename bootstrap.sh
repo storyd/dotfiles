@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -x
-
 cd "$(dirname "${BASH_SOURCE}")";
 
 git pull origin main;
@@ -17,13 +15,22 @@ function doIt() {
 	source ~/.bash_profile;
 }
 
+set -x
+
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	doIt;
 else
-	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
-	echo "";
-	if [[ $REPLY =~ ^[Yy]$ ]]; then
-		doIt;
+	if [[ $- == *i* ]]; then
+	    	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
+		echo "";
+		if [[ $REPLY =~ ^[Yy]$ ]]; then
+			doIt;
+		fi;
+	elif [ $CODESPACES ]
+ 		doIt;
 	fi;
 fi;
+
+set +x
+
 unset doIt;
