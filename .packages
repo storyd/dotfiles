@@ -1,9 +1,7 @@
 # Install AWS CLI v2
 pwd=$(pwd)
 cd /tmp
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" --clobber -o "awscliv2.zip" -s
-unzip -o awscliv2.zip
-sudo ./aws/install
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -s > awscliv2.zip && unzip -o awscliv2.zip && sudo ./aws/install
 cd $pwd
 if command -v npm 2>&1 >/dev/null; then
   # Install CDK CLI
