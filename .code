@@ -1,19 +1,21 @@
-# Copilot
-code --install-extension GitHub.copilot
+if [[ "$SHLVL" -le "1" ]]; then
+    # Copilot
+    code --install-extension GitHub.copilot
 
-# API-Debugging
-# code --install-extension rangav.vscode-thunder-client
-# code --install-extension humao.rest-client
+    # API-Debugging
+    # code --install-extension rangav.vscode-thunder-client
+    # code --install-extension humao.rest-client
 
-# Utils
-# code --install-extension heaths.vscode-guid
-code --install-extension ms-vsliveshare.vsliveshare
+    # Utils
+    # code --install-extension heaths.vscode-guid
+    code --install-extension ms-vsliveshare.vsliveshare
 
-# Python
-code --install-extension ms-python.python
-code --install-extension ms-python.vscode-pylance
-# code --install-extension ms-toolsai.jupyter
-# code --install-extension ms-python.black-formatter
-# code --install-extension ms-python.isort
+    # Python
+    code --install-extension ms-python.python
+    code --install-extension ms-python.vscode-pylance
+    # code --install-extension ms-toolsai.jupyter
+    # code --install-extension ms-python.black-formatter
+    # code --install-extension ms-python.isort
+fi
 
 
